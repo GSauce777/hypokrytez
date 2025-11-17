@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Maybe News Network</title>
+    <link rel="stylesheet" href="/static/news.css">
+</head>
+<body>
+
+    <!-- Top Header -->
+    <div class="top-banner">
+        <h1>The Maybe News Network</h1>
+        <p>Your #1 Source for Stories That Probably Didn’t Happen</p>
+    </div>
+
+    <!-- Page Layout -->
+    <div class="page-container">
+
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <h3>Trending</h3>
+            <ul>
+                <li>Scientists Discover That Water Is Wet</li>
+                <li>Local Man Discovers His Remote Had Batteries</li>
+                <li>Breaking: Cloud Computing Student Deploys VM Successfully</li>
+                <li>Weather Report: Probably Hot</li>
+            </ul>
+        </div>
+
+        <!-- Main Article Area -->
+        <div class="article-container">
+            <h2>Your Generated Article</h2>
+            <p class="date">Published: Today</p>
+
+            <!-- ChatGPT Output -->
+            <div class="article-body">
+                {{ output | safe }}
+            </div>
+
+            <!-- Input Form -->
+            <form action="/news" method="POST">
+                <textarea name="prompt" placeholder="Ask something..." required></textarea>
+                <button type="submit">Generate</button>
+            </form>
+
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar">
+            <h3>More Stories</h3>
+            <ul>
+                <li>Experts Confirm Mondays Still Bad</li>
+                <li>Time Traveler Claims Next Week Will Be Mid</li>
+                <li>New Study Shows Everyone Needs Sleep</li>
+                <li>Opinion: Tacos Are Still Elite</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
