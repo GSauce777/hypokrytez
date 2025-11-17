@@ -41,7 +41,7 @@ def news_mode():
         user_prompt = request.form.get("prompt", "")
 
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-5-mini",
             messages=[{"role": "user", "content": user_prompt}]
         )
 
